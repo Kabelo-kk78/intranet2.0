@@ -20,6 +20,10 @@ export default {
           800: '#1e40af',
           900: '#1e3a8a',
         },
+        first: '#dbd8e3',
+        second: '#5c5470',
+        third: '#352f44',
+        fourth: '#2a2438',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

@@ -1,24 +1,75 @@
+:root {
+  --first-color: #dbd8e3;
+  --second-color: #5c5470;
+  --third-color: #352f44;
+  --fourth-color: #2a2438;
+
+  /* mapped variables */
+  --accent: var(--second-color);
+  --accent-bg: var(--first-color);
+  --accent-border: var(--third-color);
+  --border: var(--fourth-color);
+  --text-h: var(--third-color);
+  --social-bg: var(--first-color);
+  --shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Utility classes for palette */
+.bg-first { background: var(--first-color); }
+.bg-second { background: var(--second-color); }
+.bg-third { background: var(--third-color); }
+.bg-fourth { background: var(--fourth-color); }
+
+.text-first { color: var(--first-color); }
+.text-second { color: var(--second-color); }
+.text-third { color: var(--third-color); }
+.text-fourth { color: var(--fourth-color); }
+
+.border-first { border-color: var(--first-color); }
+.border-second { border-color: var(--second-color); }
+.border-third { border-color: var(--third-color); }
+.border-fourth { border-color: var(--fourth-color); }
+
+/* Hover variants */
+.hover-bg-first:hover { background: var(--first-color); }
+.hover-bg-second:hover { background: var(--second-color); }
+.hover-bg-third:hover { background: var(--third-color); }
+.hover-bg-fourth:hover { background: var(--fourth-color); }
+
+.hover-text-first:hover { color: var(--first-color); }
+.hover-text-second:hover { color: var(--second-color); }
+.hover-text-third:hover { color: var(--third-color); }
+.hover-text-fourth:hover { color: var(--fourth-color); }
+
+.hover-border-first:hover { border-color: var(--first-color); }
+.hover-border-second:hover { border-color: var(--second-color); }
+.hover-border-third:hover { border-color: var(--third-color); }
+.hover-border-fourth:hover { border-color: var(--fourth-color); }
+
+/* Section-specific styling */
 .counter {
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 5px;
-  color: var(--accent);
-  background: var(--accent-bg);
+  color: var(--second-color);
+  background: var(--first-color);
   border: 2px solid transparent;
   transition: border-color 0.3s;
   margin-bottom: 24px;
 
   &:hover {
-    border-color: var(--accent-border);
+    border-color: var(--third-color);
   }
   &:focus-visible {
-    outline: 2px solid var(--accent);
+    outline: 2px solid var(--second-color);
     outline-offset: 2px;
   }
 }
 
 .hero {
   position: relative;
+  background: var(--third-color);
+  color: var(--first-color);
 
   .base,
   .framework,
@@ -63,6 +114,7 @@
   place-content: center;
   place-items: center;
   flex-grow: 1;
+  background: var(--first-color);
 
   @media (max-width: 1024px) {
     padding: 32px 20px 24px;
@@ -74,6 +126,8 @@
   display: flex;
   border-top: 1px solid var(--border);
   text-align: left;
+  background: var(--fourth-color);
+  color: var(--first-color);
 
   & > div {
     flex: 1 1 0;
